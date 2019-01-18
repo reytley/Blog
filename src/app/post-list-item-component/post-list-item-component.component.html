@@ -1,0 +1,22 @@
+
+
+<li 
+[ngClass]="{'list-group-item': true,
+              'list-group-item-success': loveIts > 0,
+              'list-group-item-light': loveIts === 0,
+              'list-group-item-danger': loveIts < 1}" >
+   
+    <div  class="row">
+        <H3>{{ title }}</H3><h4>Example heading <span class="badge  badge-info">{{ loveIts }}</span></h4> 
+        <p>{{ date | date: 'short' }}</p>
+    </div>
+    <div class="row">
+        <p>{{ content }} </p>
+    </div>
+    <div class="row">
+        <button type="button" (click)="onAllumer(true)"  class="btn btn-primary">loveIts</button>
+        <button type="button" (click)="onAllumer(false)"  class="btn btn-danger">Don't loveIts</button>
+        
+    </div>
+
+</li>
